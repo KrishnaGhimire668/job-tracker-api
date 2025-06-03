@@ -1,8 +1,14 @@
 package com.kish.jobtracker.dto;
 
+import jakarta.validation.constraints.NotBlank;
+
 
 public class JobDTO {
+
+    @NotBlank(message = "Title is required")
     private String title;
+
+    @NotBlank(message = "Company is required")
     private String company;
     private String status;
     private String dateApplied;
